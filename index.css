@@ -1,59 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+
 * {
 	padding: 0;
 	margin: 0;
-	font-family: 'Josefin Sans', sans-serif;
 	box-sizing: border-box;
+	text-decoration: none;
 }
 
-.hero {
-	height: 100vh;
+html {
+	font-family: 'Josefin Sans', sans-serif;
+	scroll-behavior: smooth;
+  }
+
+/* NAVBAR */
+
+.max-width {
+	max-width: 1300px;
+	padding: 0 40px;
+	margin: auto;
+}
+
+.navbar {						/* cor de fundo da barra toda antes */
+	padding: 30px 0;
 	width: 100%;
-	background-color: #191919;
-	background-size: cover;
-	background-position: center;
+	z-index: 999;
+	position: fixed;
+	font-family: "Ubuntu", sans-serif;
+	transition: all ease 0.3s;
+	background: #191919;
 }
 
-nav {
+.navbar.sticky {				/* cor de fundo da barra toda depois */
+	padding: 8px 0;
+	background: #43d2d4;
+}
+  
+.navbar .max-width {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding-top: 45px;
-	padding-left: 8%;
-	padding-right: 8%;
 }
 
-.logo {
-	color: white;
+.navbar .logo a {				/* POR */
+	color: #fff;
 	font-size: 35px;
-	letter-spacing: 1px;
-	cursor: pointer;
+	font-weight: 600;
 }
 
-span {
-	color: #70D9DA;
-}
-
-nav ul li {
-	list-style-type: none;
-	display: inline-block;
-	padding: 10px  25px;
-}
-
-nav ul li a {
-	color: white;
-	text-decoration: none;
-	font-weight: bold;
-	text-transform: capitalize;
-}
-
-nav ul li a:hover {
+.navbar .logo a span {			/* LIO antes */
 	color: #43d2d4;
-	transition: .4s;
+	transition: all 0.3s ease;
 }
 
-.btn {
-	background-color:#43d2d4;
+.navbar.sticky .logo a span {	/* LIO depois */
+	color: #101010;;
+}
+
+.navbar .menu li {
+	list-style: none;
+	display: inline-block;
+}
+  
+.navbar .menu li a {			/* Home, About...antes */
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500;
+	margin-left: 25px;
+	transition: color 0.3s ease;
+}
+  
+.navbar .menu li a img {
+	margin-bottom: -2px;
+	width: 20px;
+	height: 20px;
+	transition: all ease 0.3s;
+}
+  
+.navbar .menu li a img:hover {
+	filter: opacity(0.5) drop-shadow(0 0 0 #43d2d4);
+}
+
+/* MENU SUBSCRIBE */
+
+/* Efeito cor quando passa o mouse depois em SUBSCRIBE geral */
+.subscribe:hover {
+	transform: scale(1.1);
+}
+
+/* MENU geral */
+ul.menu a {
 	color: white;
+}
+
+/* Efeito cor quando passa o mouse em MENU geral */
+ul.menu a:hover {
+	color: #43d2d4;
+}
+
+/* Efeito cor quando passa o mouse em MENU geral */
+.navbar.sticky ul.menu a:hover {
+	color: #0b021b;
+	font-weight: 600;
+}
+
+.topnav {
+	overflow: hidden;
+	color: #fff;
+}
+
+.topnav a {
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.topnav a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+/* SUBSCRIBE tela de cima */
+.subscribe {          					
+	background-color:#43d2d4;
+	color: #fff;
 	text-decoration: none;
 	border: 2px solid transparent;
 	font-weight: bold;
@@ -62,113 +135,256 @@ nav ul li a:hover {
 	transition: transform .4s; 
 }
 
-.btn:hover {
-	transform: scale(1.2);
+/* SUBSCRIBE tela de baixo */
+.navbar.sticky .subscribe {
+	background-color: #101010;
+	color: #fff;
 }
 
-.content {
-	position: absolute;
-	top: 50%;
-	left:8%;
-	transform: translateY(-50%);
+/* scroll-up */
+
+.topnav {
+	color: #ffff;
+	font-size: 23px;
+	cursor: pointer;
+	display: none;
+  }
+
+.scroll-up-btn {
+	position: fixed;
+	height: 45px;
+	width: 42px;
+	background: #43d2d4;
+	right: 30px;
+	bottom: 30px;
+	text-align: center;
+	line-height: 45px;
+	color: #fff;
+	z-index: 999;
+	font-size: 30px;
+	border-radius: 7px;
+	cursor: pointer;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.3s ease;
+}
+  
+.scroll-up-btn.show {
+	bottom: 30px;
+	opacity: 1;
+	pointer-events: auto;
+}
+  
+/* HOME SECTION */
+
+.home .max-width {
+	max-width: 1300px;
+	padding: 0 40px;
+	margin: auto;
 }
 
-h1 {
-	color: white;
-	margin: 20px 0px 20px;
-	font-size: 75px;
-}
+.home {									/* Carina...Iam front-end... */
+	color: #fff;
+	display: flex;
+	background: #191919;
+	background-attachment: fixed;
+	height: 108.9vh;
+	min-height: 500px;
+	font-family: "Ubuntu" sans-serif;
+  }
+  
+  .home .max-width {
+	width: 100%;
+	display: flex;
+  }
 
-h3 {
-	color: white;
-	font-size: 25px;
-	margin-bottom: 50px;
-}
+  .home .content {
+	font-family: "Ubuntu", sans-serif;
+  }
 
-h4 {
+  .home .content .text-1 {	/* Hello, my name is */
 	color: #43d2d4;
-	letter-spacing: 2px;
-	font-size: 20px;
-}
+	font-size: 27px;
+  }
 
-.newslatter form {
-	width: 380px;
+  .home .content .text-2 {	/* Carina */	
+	font-size: 65px;
+	font-weight: 600;
+	margin-left: -3px;
+  }
+
+  .home .text-2 span {		/* Prates */	
+	color: #43d2d4;
+	font-weight: 600;
+  }
+
+  .home .content .text-3 {	/* I'am a Front-end Developer. */
+	font-size: 40px;
+	margin: 5px 0;
+  }
+
+  .newslatter form {		/* Enter Your Email */
+	padding-left: 100px;
+	margin-top: 105px;
+	width: 400px;
 	max-width: 100%;
 	position: relative;
 }
 
-.newslatter form input:first-child {
+.newslatter form .mail {	/* Enter Your Email */
 	display: inline-block;
 	width: 100%;
 	padding: 14px 130px 14px 15px;
-	border: 2px solid #43d2d4;
+	border: 3px solid #43d2d4;
 	outline: none;
 	border-radius: 30px;
 }
 
-.newslatter form input:last-child {
-	position: absolute;
+.newslatter form .submit { 		/* Lets Start */ 
 	display: inline-block;
-	outline: none;
-	border: none;
-	padding: 10px 30px;
+	background: #43d2d4;
+	color: #101010;
+	font-size: 15px;
+	padding: 12px 20px;
 	border-radius: 30px;
-	background-color:#43d2d4;
-	color: white;
-	top: 6px;
-	right: 6px; 
+	border: 3px solid #43d2d4;
+	transition: all ease 0.3s;
+	font-weight: 600;
+
+	position: relative;
+	bottom: 48.5px;
+	left: 189px;
+  }
+  .newslatter form .submit:hover {
+	color: #fff;
+	background: #191919;
+	border: 3px solid #43d2d4;
+  }
+  
+/* About Section */
+
+.about .max-width {
+	max-width: 1300px;
+	padding: 110px 40px;
+	margin: auto;
 }
 
 .about {
-	width: 100%;
-	padding: 100px 0px;
-	background-color: #191919;
-}
-
-.about img {
-	height: auto;
-	width: 430px;
-}
-
-.about-text {
-	width: 550px;
-}
-
-.main {
-	width: 1130px;
-	max-width: 95%;
-	margin: 0 auto;
+	background: #0b021b;
+	font-family: "Poppins", sans-serif;
+  }
+  
+  .about .about-content, .services .serv-content {
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
-}
+	flex-wrap: wrap;
+	justify-content: space-between;
+  }
 
-.about-text h2 {
-	color: white;
-	font-size: 75px;
-	text-transform: capitalize;
-	margin-bottom: 20px;
-}
-
-.about-text h5 {
-	color: white;
-	letter-spacing: 2px;
-	font-size: 22px;
-	margin-bottom: 25px;
-	text-transform: capitalize;
-}
-
-.about-text p {
+  .about .about-content .right {
+	width: 55%;
+	padding-bottom: 40px;
+  }
+  
+  .about .about-content .left img {		/* Foto */ 
+	width: 350px;
+	height: 350px;
+	object-fit: cover;
+	border-radius: 100%;
+	border-style: solid;
+	border-color: #fff;
+	border-width: 2px;
+  }
+    
+  .about .about-content .right h2 {		/* About Me */ 
 	color: #43d2d4;
-	letter-spacing: 1px;
-	line-height: 28px;
-	font-size: 18px;
-	margin-bottom: 45px;
+    font-size: 55px;
+    text-transform: capitalize;
+	font-weight: 600;
+  }
+  
+  .about .about-content .right .text {	/* Developer & Designer */ 
+	color: #fff;
+	font-size: 24px;
+	font-weight: 600;
+  }
+
+  .about .about-content .right p {		/* I am a front-end web developer... */
+	color: #fff;
+	font-size: 16px;
+	text-align: justify;
+	padding: 14px 40px 0px 0px;
+  } 
+  
+  .about .about-content .right a { 		/* Download CV */ 
+	display: inline-block;
+	background: #43d2d4;
+	color: #101010;
+	font-size: 16px;
+	padding: 12px 36px;
+	margin-top: 20px;
+	border-radius: 30px;
+	border: 2px solid #43d2d4;
+	transition: all ease 0.3s;
+	font-weight: 600;
+  }
+  .about .about-content .right a:hover {
+	color: #fff;
+	background: none;
+  }
+  
+section .title {
+	color: #fff;
+	position: relative;
+	text-align: center;
+	font-family: "Ubuntu", sans-serif;
+	font-size: 40px;
+	font-weight: 500;
+	margin-left: 60px;
+}
+
+section .title::before {
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	width: 180px;
+	height: 3px;
+	background: #43d2d4;
+	transform: translateX(-50%);
+}
+
+section .title::after {
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	font-size: 20px;
+	padding: 0 5px;
+	background: #fff;
+	transform: translateX(-50%);
+}
+  
+.about .about-content,
+.services .serv-content,
+.contact .contact-content {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* Services */
+
+.service .max-width {
+	max-width: 5500px;
+	padding: 40px;
+	margin: auto;
+	background: #101010;
 }
 
 button {
 	background-color:#43d2d4;
-	color: white;
+	color: #fff;
 	text-decoration: none;
 	border: 2px solid transparent;
 	font-weight: bold;
@@ -183,17 +399,11 @@ button:hover {
 	cursor: pointer;
 }
 
-.service {
-	background: #101010;
-	width: 100%;
-	padding: 100px 0px;
-}
-
-.title h2 {
-	color: white;
-	font-size: 75px;
+.title h2 {				/* Services */
+	color: #fff;
+	font-size: 48px;
 	width: 1130px;
-	margin: 30px auto;
+	margin: 10px auto;
 	text-align: center;
 }
 
@@ -225,7 +435,7 @@ button:hover {
 }
 
 h5 {
-	color: white;
+	color: #fff;
 	font-size: 23px;
 	margin-bottom: 15px;
 }
@@ -239,7 +449,7 @@ h5 {
 
 .card .button {
 	background-color:#43d2d4;
-	color: white;
+	color: #191919;
 	text-decoration: none;
 	border: 2px solid transparent;
 	font-weight: bold;
@@ -250,30 +460,37 @@ h5 {
 
 .card .button:hover {
 	background-color: transparent;
+	color: #fff;
 	border: 2px solid #43d2d4;
 	cursor: pointer;
 }
+/* Contact */
+
+.contact .max-width {
+	max-width: 5500px;
+	background: #101010;
+}
 
 .contact-me {
-	width: 100%;
-	height: 290px;
 	background: #191919;
 	display: flex;
 	align-items: center;
-	flex-direction: column;
 	justify-content: center;
+	flex-direction: column;
+	border-radius: 30px;
+	padding: 40px;
 }
 
-.contact-me p {
+.contact-me p {						/* Let Me Get You A Beautiful Website. */
 	color: white;
-	font-size: 30px;
+	font-size: 24px;
 	font-weight: bold;
 	margin-bottom: 25px;
 }
 
-.contact-me .button-two {
+.contact-me .button-two {			/* Botão Hire Me ANTES */
 	background-color:#43d2d4;
-	color: white;
+	color: #191919;
 	text-decoration: none;
 	border: 2px solid transparent;
 	font-weight: bold;
@@ -282,8 +499,9 @@ h5 {
 	transition: .4s; 
 }
 
-.contact-me .button-two:hover {
+.contact-me .button-two:hover {		/* Botão Hire Me DEPOIS */
 	background-color: transparent;
+	color: #fff;
 	border: 2px solid #43d2d4;
 	cursor: pointer;
 }
@@ -291,7 +509,7 @@ h5 {
 footer {
 	position: relative;
 	width: 100%;
-	height: 400px;
+	height: 250px;
 	background: #101010;
 	display: flex;
 	flex-direction: column;
@@ -299,14 +517,7 @@ footer {
 	justify-content: center;
 }
 
-footer p:nth-child(1) {
-	font-size: 30px;
-	color: white;
-	margin-bottom: 20px;
-	font-weight: bold;
-}
-
-footer p:nth-child(2) {
+footer p {						/* For more info... */
 	color: white;
 	font-size: 17px;
 	width: 500px;
@@ -314,20 +525,20 @@ footer p:nth-child(2) {
 	line-height: 26px;
 }
 
-.social {
+.social {						/* Github e Linkedin */
 	display: flex;
 }
 
-.social a {
-	width: 45px;
-	height: 45px;
+.social a {						
+	width: 30px;
+	height: 30px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background:  #43d2d4;
+	background:  #101010;
 	border-radius: 50%;
 	margin: 22px 10px;
-	color: white;
+	color: #43d2d4;
 	text-decoration: none;
 	font-size: 20px;
 }
@@ -337,9 +548,9 @@ footer p:nth-child(2) {
 	transition: .3s;
 }
 
-.end {
+.end {							/* © Carina Prates */
 	position: absolute;
-	color:#64d4d6;
-	bottom: 35px;
-	font-size: 16px; 
+	color:#fff;
+	bottom: 1px;
+	font-size: 14px; 
 }
