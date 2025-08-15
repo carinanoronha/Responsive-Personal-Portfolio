@@ -39,18 +39,4 @@ $(document).ready(function () {
             1000: { items: 3 }
         }
     });
-
-    // Animação das barras de progresso em Skills
-    $(window).on('scroll', function () {
-        var skillsSection = $('.skills').offset().top - $(window).height() + 200;
-        if ($(window).scrollTop() > skillsSection) {
-            $('.progress-bar span').each(function () {
-                $(this).css('width', $(this).data('width') + '%');
-            });
-        }
-    });
-    $('.progress-bar span').each(function () {
-        var width = $(this).data('width') || 50; // Padrão de 50% se não houver data-width
-        $(this).css('width', '0').data('width', width);
-    });
 });
