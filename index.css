@@ -124,7 +124,8 @@ body {
 }
 .newslatter form {
     margin-top: 20px;
-    display: inline-block;
+    display: inline-flex;
+    gap: 10px;
 }
 .newslatter .mail {
     padding: 10px 20px;
@@ -150,10 +151,11 @@ body {
     padding: 100px 0;
     background: #0b021b;
 }
-.about .title {
+.title {
     text-align: center;
     font-size: 40px;
     margin-bottom: 60px;
+    margin-top: 60px;
 }
 .about .about-content {
     display: flex;
@@ -345,6 +347,9 @@ footer .social a:hover {
         margin-bottom: 20px;
     }
     .skills .skill-box {
+        width: 100%;
+    }
+    .projects .carousel .card {
         width: 100%;
     }
 }
