@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Carina Prates</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 </head>
@@ -20,9 +18,7 @@
 
     <nav class="navbar">
         <div class="max-width">
-            <div class="logo">
-                <a href="#">Portfo<span>lio</span></a>
-            </div>
+            <div class="logo"><a href="#">Portfo<span>lio</span></a></div>
             <ul class="menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Me</a></li>
@@ -30,28 +26,23 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact Me</a></li>
-                <li><a href="https://github.com/carinanoronha/" target="_blank"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/carina-prates-noronha/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
             </ul>
-            <a href="#contact" class="subscribe">Contact Me</a>
-            <div class="topnav">
-                <i class="fa fa-bars" style="font-size:24px"></i>
-            </div>
+            <div class="menu-btn"><i class="fa fa-bars"></i></div>
         </div>
     </nav>
 
     <section class="home" id="home">
         <div class="max-width">
-            <div class="content">
+            <div class="home-content">
                 <div class="text-1">Hello, my name is</div>
                 <div class="text-2">Carina <span>Prates</span></div>
                 <div class="text-3">I'am a <span class="typing"></span></div>
-            </div>
-            <div class="newslatter">
-                <form>
-                    <input type="email" name="email" class="mail" placeholder="Enter Your Email" required>
-                    <input type="submit" name="submit" class="submit" value="Let's Start">
-                </form>
+                <div class="newslatter">
+                    <form>
+                        <input type="email" class="mail" placeholder="Enter Your Email" required>
+                        <input type="submit" class="submit" value="Let's Start">
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -60,9 +51,7 @@
         <div class="max-width">
             <h2 class="title">About Me</h2>
             <div class="about-content">
-                <div class="column left">
-                    <img src="images/circle_perfil.png" alt="Carina Prates">
-                </div>
+                <div class="column left"><img src="images/circle_perfil.png" alt="Carina Prates"></div>
                 <div class="column right">
                     <div class="text">Developer & Designer</div>
                     <p>I am a front-end web developer with a passion for creating clean code and pixel-perfect designs. I enhance websites with interactive animations and ensure responsive layouts for all devices.</p>
@@ -75,30 +64,21 @@
     <section class="services" id="services">
         <div class="max-width">
             <h2 class="title">Services</h2>
-            <div class="box">
+            <div class="serv-content">
                 <div class="card">
                     <i class="fas fa-bars"></i>
                     <h5>Web Development</h5>
-                    <div class="pra">
-                        <p>Responsive personal sites, e-commerce, and business pages.</p>
-                        <p style="text-align: center;"><a class="button" href="#projects">See Projects</a></p>
-                    </div>
+                    <p>Responsive personal sites, e-commerce, and business pages.</p>
                 </div>
                 <div class="card">
                     <i class="far fa-user"></i>
                     <h5>Mobile Apps</h5>
-                    <div class="pra">
-                        <p>Modern and fast apps with React Native for Android and iOS.</p>
-                        <p style="text-align: center;"><a class="button" href="#projects">See Projects</a></p>
-                    </div>
+                    <p>Modern and fast apps with React Native for Android and iOS.</p>
                 </div>
                 <div class="card">
                     <i class="far fa-bell"></i>
                     <h5>Automations</h5>
-                    <div class="pra">
-                        <p>Streamlining repetitive tasks with custom solutions.</p>
-                        <p style="text-align: center;"><a class="button" href="#projects">See Projects</a></p>
-                    </div>
+                    <p>Streamlining repetitive tasks with custom solutions.</p>
                 </div>
             </div>
         </div>
@@ -108,22 +88,10 @@
         <div class="max-width">
             <h2 class="title">Skills</h2>
             <div class="skills-content">
-                <div class="skill-box">
-                    <h3>HTML</h3>
-                    <div class="progress-bar"><span style="width: 90%;"></span></div>
-                </div>
-                <div class="skill-box">
-                    <h3>CSS</h3>
-                    <div class="progress-bar"><span style="width: 85%;"></span></div>
-                </div>
-                <div class="skill-box">
-                    <h3>JavaScript</h3>
-                    <div class="progress-bar"><span style="width: 70%;"></span></div>
-                </div>
-                <div class="skill-box">
-                    <h3>React</h3>
-                    <div class="progress-bar"><span style="width: 60%;"></span></div>
-                </div>
+                <div class="skill-box"><h3>HTML</h3><div class="progress-bar"><span style="width: 90%;"></span></div></div>
+                <div class="skill-box"><h3>CSS</h3><div class="progress-bar"><span style="width: 85%;"></span></div></div>
+                <div class="skill-box"><h3>JavaScript</h3><div class="progress-bar"><span style="width: 70%;"></span></div></div>
+                <div class="skill-box"><h3>React</h3><div class="progress-bar"><span style="width: 60%;"></span></div></div>
             </div>
         </div>
     </section>
@@ -133,13 +101,13 @@
             <h2 class="title">Projects</h2>
             <div class="carousel owl-carousel">
                 <div class="card">
-                    <img src="images/project1.jpg" alt="Project 1">
+                    <img src="images/project1.jpg" alt="Clothing Store">
                     <h4>Clothing Store</h4>
                     <p>A responsive e-commerce site.</p>
                     <a href="https://responsive-clothing-store-page.vercel.app/" target="_blank">View</a>
                 </div>
                 <div class="card">
-                    <img src="images/project2.jpg" alt="Project 2">
+                    <img src="images/project2.jpg" alt="Personal Portfolio">
                     <h4>Personal Portfolio</h4>
                     <p>My initial portfolio design.</p>
                     <a href="https://responsive-personal-portfolio-virid.vercel.app/" target="_blank">View</a>
@@ -150,9 +118,9 @@
 
     <section class="contact" id="contact">
         <div class="max-width">
-            <div class="contact-me">
+            <div class="contact-content">
                 <p>Let Me Get You A Beautiful Website.</p>
-                <a class="button-two" href="mailto:carina@example.com">Hire Me</a>
+                <a href="mailto:carina@example.com" class="button-two">Hire Me</a>
             </div>
         </div>
     </section>
