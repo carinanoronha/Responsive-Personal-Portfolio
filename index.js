@@ -16,16 +16,11 @@ $(document).ready(function () {
         $("html").animate({ scrollTop: 0 });
     });
 
-    $(".topnav").click(function () {
+    $(".menu-btn").click(function () {
         $(".navbar .menu").toggleClass("active");
-        $(".topnav i").toggleClass("active");
-    });
-    $(".navbar .menu li a").click(function () {
-        $(".navbar .menu").toggleClass("active");
-        $(".topnav i").toggleClass("active");
+        $(".menu-btn i").toggleClass("fa-times");
     });
 
-    // Typed.js para animação de texto
     var typed = new Typed(".typing", {
         strings: ["Front-end Developer", "UI/UX Designer", "Web Enthusiast"],
         typeSpeed: 100,
@@ -33,16 +28,15 @@ $(document).ready(function () {
         loop: true
     });
 
-    // Owl Carousel
     $(".carousel").owlCarousel({
         margin: 20,
         loop: true,
         autoplayTimeout: 2000,
         autoplayHoverPause: true,
         responsive: {
-            0: { items: 1, nav: false },
-            600: { items: 2, nav: false },
-            1000: { items: 3, nav: false }
+            0: { items: 1 },
+            600: { items: 2 },
+            1000: { items: 3 }
         }
     });
 });
