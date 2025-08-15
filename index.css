@@ -155,7 +155,7 @@ body {
     text-align: center;
     font-size: 40px;
     margin-bottom: 60px;
-    margin-top: 60px;
+    margin-top: 100px; /* Aumentado para evitar sobreposição com navbar */
 }
 .about .about-content {
     display: flex;
